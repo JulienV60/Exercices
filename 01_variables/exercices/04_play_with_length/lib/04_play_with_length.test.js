@@ -1,14 +1,14 @@
 /* global beforeAll describe test expect */
 const fs = require("fs");
 const path = require("path");
+const readcode = require("./readcode");
 
 let studentCode;
 beforeAll(() => {
   // Loads the student's code
-  studentCode = readcode(path.resolve(__dirname, "../src/index.js"));
+  studentCode = readcode(path.resolve(__dirname, "../lib/index.js"));
   return studentCode;
 });
-
 describe("#04_play_with_length", () => {
   test("questionLength should equal to the length of question", () => {
     return studentCode.then((code) => {
