@@ -1,14 +1,14 @@
 /* global beforeAll describe test expect */
 const fs = require("fs");
 const path = require("path");
+const readcode = require("./readcode");
 
 let studentCode;
 beforeAll(() => {
   // Loads the student's code
-  studentCode = readcode(path.resolve(__dirname, "../src/index.js"));
+  studentCode = readcode(path.resolve(__dirname, "../lib/index.js"));
   return studentCode;
 });
-
 test("#digits should be an array with numbers from 0 to 9", () => {
   return studentCode.then((code) => {
     const digits = eval(code + "; digits;");
