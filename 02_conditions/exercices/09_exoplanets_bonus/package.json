@@ -1,0 +1,39 @@
+{
+  "name": "09_exoplanets_bonus",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.0",
+    "jest": "29.0.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "ignorePatterns": [
+      "jest.config.js",
+      "node_modules/",
+      "*.test.js",
+      "src.sample/*",
+      "src/*"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
