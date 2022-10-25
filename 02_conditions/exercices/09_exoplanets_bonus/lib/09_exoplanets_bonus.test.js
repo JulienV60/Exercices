@@ -1,13 +1,10 @@
-/* global beforeAll describe test expect */
-const fs = require("fs");
 const path = require("path");
-const readcode = require("./readcode");
+const readcode = require("./readCode");
+const planets = require("./exoplanetsData");
 
-let studentCode;
-beforeAll(() => {
-  // Loads the student's code
-  studentCode = readcode(path.resolve(__dirname, "../lib/index.js"));
-  return studentCode;
+let code;
+beforeAll(async () => {
+  code = await readcode(path.resolve(__dirname, "./index.js"));
 });
 
 function getStudentCode(code, testData, testStar = { spectralClass: "M" }) {

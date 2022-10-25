@@ -1,7 +1,3 @@
-/*
-  This file is for teachers to help with the tests.
- */
-
 const fs = require("fs");
 
 module.exports = function (path) {

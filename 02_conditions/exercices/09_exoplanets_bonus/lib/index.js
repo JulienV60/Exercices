@@ -1,6 +1,6 @@
 // Don't modify these lines for tests to work properly.
-const star = require("./data/starData");
-const planet = require("./data/exoplanetData");
+const star = require("./starData");
+const planet = require("./exoplanetsData");
 
 // Your code here:
 let canHabitateLife;
